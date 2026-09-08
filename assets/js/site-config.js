@@ -44,11 +44,13 @@ const ZENITH = {
     sundayLabel: "Sunday",
     sundayTime: "9:00 AM – 2:00 PM",
     timezone: "Asia/Kolkata",
+    weekdayOpens: "09:00", weekdayCloses: "21:00",
+    sundayOpens: "09:00", sundayCloses: "14:00",
   },
 
   // TODO: set this to your live domain before launch, e.g. "https://www.zenithenterprise.in"
   // Used for the canonical link tag and structured data "url" field.
-  siteUrl: "REPLACE_WITH_YOUR_DOMAIN",
+  siteUrl: "https://zenith-navsari.aakiflok52-al.chatgpt.site",
 
   // Optional analytics hooks — leave blank to keep tracking OFF by default.
   // See README "Tracking (optional)" section before filling these in.
@@ -219,6 +221,6 @@ const FAQS = [
   },
   {
     q: "What are your opening hours?",
-    a: "Monday–Saturday, 9:00 AM–9:00 PM, and Sunday, 9:00 AM–2:00 PM (Asia/Kolkata).",
+    a: ZENITH.hours.weekdayLabel + ", " + ZENITH.hours.weekdayTime + "; " + ZENITH.hours.sundayLabel + ", " + ZENITH.hours.sundayTime + " (" + ZENITH.hours.timezone + ").",
   },
 ];
