@@ -56,6 +56,7 @@
   }
 
   function wireGlobalCTAs() {
+    document.querySelectorAll("[data-hours]").forEach(function (el) { el.textContent = ZENITH.hours[el.getAttribute("data-hours")]; });
     var els = document.querySelectorAll("[data-phone-href]");
     els.forEach(function (el) {
       el.setAttribute("href", ZENITH.phoneHref);
@@ -227,14 +228,14 @@
             "Friday",
             "Saturday",
           ],
-          opens: "09:00",
-          closes: "21:00",
+          opens: ZENITH.hours.weekdayOpens,
+          closes: ZENITH.hours.weekdayCloses,
         },
         {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: ["Sunday"],
-          opens: "09:00",
-          closes: "14:00",
+          opens: ZENITH.hours.sundayOpens,
+          closes: ZENITH.hours.sundayCloses,
         },
       ],
       areaServed: "Navsari and nearby villages",
@@ -262,6 +263,11 @@
     toggle.addEventListener("click", function () {
       var isOpen = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        nav.classList.remove("is-open"); toggle.setAttribute("aria-expanded", "false"); toggle.focus();
+      }
     });
     nav.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
@@ -311,7 +317,7 @@
     document.querySelectorAll("[data-track]").forEach(function (el) {
       el.addEventListener("click", function () {
         var label = el.getAttribute("data-track");
-        if (window.gtag) {
+        if (ZENITH.tracking.gtagId && typeof window.gtag === "function") {
           window.gtag("event", "click", { event_category: "contact", event_label: label });
         }
         // No third-party tracking runs unless you wire it up yourself. See README.

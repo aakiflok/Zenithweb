@@ -1013,3 +1013,18 @@ label:focus-within,
   padding: 0.4em 0.85em;
   border-radius: 999px;
 }
+
+/* Launch accessibility and small-screen fixes */
+html { scroll-padding-top: 6rem; }
+.btn--wa, .sticky-bar a.sticky-bar__wa { color: #12351f; }
+.footer-bottom { color: var(--ink-soft); }
+.hero__media picture, .gallery-strip picture, .about-media picture { display: block; height: 100%; }
+@media (max-width: 540px) {
+ .site-header__bar { flex-wrap: wrap; gap: .5rem; }
+ .brand { flex: 1; }
+ .header-actions .btn { display: none; }
+ .nav-toggle { min-width: 44px; min-height: 44px; }
+ .contact-card { padding: 1.1rem; min-width: 0; }
+ .hours-table td { overflow-wrap: anywhere; }
+}
+@media (max-width: 720px) { .sticky-bar { height: calc(var(--sticky-bar-height) + env(safe-area-inset-bottom, 0px)); } }

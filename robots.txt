@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-
-# TODO: uncomment once your domain is live
-# Sitemap: https://REPLACE_WITH_YOUR_DOMAIN/sitemap.xml
+Sitemap: https://zenith-navsari.aakiflok52-al.chatgpt.site/sitemap.xml
