@@ -1028,3 +1028,33 @@ html { scroll-padding-top: 6rem; }
  .hours-table td { overflow-wrap: anywhere; }
 }
 @media (max-width: 720px) { .sticky-bar { height: calc(var(--sticky-bar-height) + env(safe-area-inset-bottom, 0px)); } }
+
+/* Compact editorial refinement */
+:root { --radius: 4px; --gap: 1rem; }
+.brand img { width: 90px; height: 64px; object-fit: contain; flex-shrink: 0; }
+.footer-brand img { width: 76px; height: 54px; object-fit: contain; }
+.section { padding-block: clamp(2.5rem, 5vw, 4rem); }
+.section--tight { padding-block: clamp(2rem, 4vw, 3rem); }
+.section-head { margin-bottom: 1.75rem; }
+.btn, .hero__media, .gallery-strip figure, .about-media, .products-note { border-radius: 4px; }
+.ticket-grid { gap: .75rem; }
+.ticket-card { display: grid; grid-template-columns: 24px minmax(0,1fr); column-gap: .65rem; row-gap: .35rem; padding: 1rem; align-content: start; }
+.ticket-card__icon { width: 22px; height: 22px; margin: 0; }
+.ticket-card__title { font-size: 1rem; line-height: 1.3; margin: 0; padding-right: 1.3rem; }
+.ticket-card__blurb { grid-column: 2; font-size: .9rem; line-height: 1.45; }
+.ticket-card__check { width: 18px; height: 18px; top: 1rem; right: .8rem; }
+.ticket-card:has(.ticket-card__radio:checked) .ticket-card__check::after { left: 5px; top: 1px; }
+.ticket-card__radio:focus-visible ~ * { outline: none; }
+.ticket-card:focus-within { outline: 3px solid var(--focus); outline-offset: 3px; }
+.repair-cta { margin-top: 1rem; padding-top: 1rem; }
+.repair-cta__hint { font-family: var(--font-body); font-size: .9rem; font-style: normal; }
+.product-tile { padding: 1rem .7rem; }
+@media (max-width: 720px) {
+ .repair-cta__actions { display: none; }
+ .sticky-bar { min-height: calc(64px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 540px) {
+ .brand img { width: 70px; height: 50px; }
+ .brand__name { font-size: 1rem; }
+ .ticket-card { padding: .85rem 1rem; }
+}
