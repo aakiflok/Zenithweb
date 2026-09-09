@@ -65,108 +65,68 @@ const ZENITH = {
  * categories and should stay first. Add/remove/edit entries freely;
  * the page rebuilds the cards and WhatsApp links from this list.
  *
- * whatsappMessage supports \n for line breaks.
+ * WhatsApp enquiry text is built from the selected category name in main.js.
  */
 const REPAIR_CATEGORIES = [
   {
     id: "washing-machine",
     name: "Washing Machines",
     icon: "washing-machine",
-    prompt: "Washing machine not spinning or draining?",
-    blurb:
-      "Front-load and top-load, multiple brands. Drum, motor, drainage and control issues assessed at your home or our workshop.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Washing Machine\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Drum, motor and drainage repairs for front-load and top-load machines.",
   },
   {
     id: "refrigerator",
     name: "Refrigerators & Fridges",
     icon: "fridge",
-    prompt: "Fridge not cooling?",
-    blurb:
-      "Cooling problems, unusual noise, gas and compressor issues. One of our strongest repair categories, handled by our own technicians.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Refrigerator\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Cooling, compressor and noise issues, assessed by our technicians.",
   },
   {
     id: "ac",
     name: "Air Conditioners",
     icon: "ac",
-    prompt: "AC not cooling properly?",
-    blurb:
-      "Split and window units. Gas, cooling, drainage and servicing, at your home or our workshop.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Air Conditioner\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Cooling, drainage and servicing for split and window units.",
   },
   {
     id: "tv",
     name: "Televisions",
     icon: "tv",
-    prompt: "TV picture or sound problems?",
-    blurb:
-      "Display, sound and power issues across multiple brands, assessed by our technicians.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: TV\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Display, sound and power repairs across multiple brands.",
   },
   {
     id: "oven",
     name: "Ovens",
     icon: "oven",
-    prompt: "Oven not heating evenly?",
-    blurb:
-      "Heating element, timer and control issues on OTG and other home ovens.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Oven\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Heating element, timer and control repairs for home ovens.",
   },
   {
     id: "microwave",
     name: "Microwaves",
     icon: "microwave",
-    prompt: "Microwave or oven not heating?",
-    blurb:
-      "Heating, turntable and control-panel issues, assessed at your home or our workshop.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Microwave\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Heating, turntable and control-panel repairs.",
   },
   {
     id: "geyser",
     name: "Geysers & Water Heaters",
     icon: "geyser",
-    prompt: "Geyser not heating water?",
-    blurb:
-      "Heating element, thermostat and leakage issues on electric water heaters.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Geyser / Water Heater\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Heating element, thermostat and leakage repairs.",
   },
   {
     id: "gas-stove",
     name: "Gas Stoves",
     icon: "gas-stove",
-    prompt: "Burner not igniting evenly?",
-    blurb:
-      "Ignition, burner and valve issues on gas stoves, checked and serviced by our technicians.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Gas Stove\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Ignition, burner and valve servicing.",
   },
   {
     id: "chimney",
     name: "Chimneys",
     icon: "chimney",
-    prompt: "Kitchen chimney suction weak or noisy?",
-    blurb:
-      "Suction, motor and filter issues on kitchen chimneys, assessed at home or in our workshop.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: Chimney\nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Suction, motor and filter servicing.",
   },
   {
     id: "other",
     name: "Other Appliances & Electronics",
     icon: "other",
-    prompt: "Something else acting up?",
-    blurb:
-      "We repair a wide range of home appliances and electronics beyond the categories above — subject to confirmation. Tell us what you have.",
-    whatsappMessage:
-      "Hello " + ZENITH.businessName + ", I need appliance repair service.\nAppliance: \nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.",
+    blurb: "Tell us about your appliance. Repairs subject to confirmation.",
   },
 ];
 

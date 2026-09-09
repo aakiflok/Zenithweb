@@ -40,10 +40,7 @@
     );
   }
 
-  var GENERAL_MESSAGE =
-    "Hello " +
-    ZENITH.businessName +
-    ", I need appliance repair service.\nAppliance: \nProblem: \nLocation: \nPlease let me know your visiting charges and earliest available service time.";
+  var GENERAL_MESSAGE = "Hello Zenith, I need appliance repair service.\nPlease let me know your visiting charges and earliest available service time";
 
   /* ----------------------------------------------------------------
    * WhatsApp / call link helpers
@@ -106,9 +103,6 @@
         '<span class="ticket-card__title">' +
         cat.name +
         "</span>" +
-        '<span class="ticket-card__prompt">' +
-        cat.prompt +
-        "</span>" +
         '<span class="ticket-card__blurb">' +
         cat.blurb +
         "</span>" +
@@ -128,14 +122,14 @@
     if (!callBtn || !waBtn) return;
 
     function setSelection(cat) {
+      var message = cat
+        ? GENERAL_MESSAGE.replace("\n", "\nAppliance: " + cat.name + "\n")
+        : GENERAL_MESSAGE;
+      document.querySelectorAll("[data-wa-general], #repair-wa").forEach(function (link) {
+        link.setAttribute("href", buildWhatsAppUrl(message));
+      });
       if (callBtn) callBtn.setAttribute("href", ZENITH.phoneHref);
-      if (cat) {
-        waBtn.setAttribute("href", buildWhatsAppUrl(cat.whatsappMessage));
-        if (hint) hint.textContent = "Selected: " + cat.name + " — reach us:";
-      } else {
-        waBtn.setAttribute("href", buildWhatsAppUrl(GENERAL_MESSAGE));
-        if (hint) hint.textContent = "Select an appliance above, or send a general enquiry:";
-      }
+      if (hint) hint.textContent = cat ? "Selected: " + cat.name : "Select an appliance, or send a general enquiry.";
     }
 
     radios.forEach(function (radio) {
