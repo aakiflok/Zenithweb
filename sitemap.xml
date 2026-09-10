@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: replace the <loc> below with your live domain once hosted -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://zenith-navsari.aakiflok52-al.chatgpt.site/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-</urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://zenithweb-gold.vercel.app/</loc></url><url><loc>https://zenithweb-gold.vercel.app/washing-machine-repair-navsari/</loc></url><url><loc>https://zenithweb-gold.vercel.app/refrigerator-repair-navsari/</loc></url><url><loc>https://zenithweb-gold.vercel.app/other-appliance-repair-navsari/</loc></url><url><loc>https://zenithweb-gold.vercel.app/contact/</loc></url></urlset>
