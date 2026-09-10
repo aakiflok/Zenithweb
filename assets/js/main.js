@@ -42,6 +42,9 @@
 
   var GENERAL_MESSAGE = "Hello Zenith, I need appliance repair service.\nPlease let me know your visiting charges and earliest available service time";
 
+  var pageAppliance = document.querySelector("[data-appliance]");
+  if (pageAppliance && pageAppliance.dataset.appliance) GENERAL_MESSAGE = GENERAL_MESSAGE.replace("\n", "\nAppliance: " + pageAppliance.dataset.appliance + "\n");
+
   /* ----------------------------------------------------------------
    * WhatsApp / call link helpers
    * -------------------------------------------------------------- */
@@ -312,7 +315,7 @@
       el.addEventListener("click", function () {
         var label = el.getAttribute("data-track");
         if (ZENITH.tracking.gtagId && typeof window.gtag === "function") {
-          window.gtag("event", "click", { event_category: "contact", event_label: label });
+          window.gtag("event", "click", { event_category: "contact", event_label: label, page_path: window.location.pathname });
         }
         // No third-party tracking runs unless you wire it up yourself. See README.
       });
@@ -324,7 +327,7 @@
     renderRepairCards();
     renderProductCards();
     renderFAQ();
-    injectStructuredData();
+    // LocalBusiness data is delivered in the HTML for crawlers and non-JS clients.
     wireMobileNav();
     wireAnchorScroll();
     wireHeaderScroll();

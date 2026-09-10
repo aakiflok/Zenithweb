@@ -50,7 +50,7 @@ const ZENITH = {
 
   // TODO: set this to your live domain before launch, e.g. "https://www.zenithenterprise.in"
   // Used for the canonical link tag and structured data "url" field.
-  siteUrl: "https://zenith-navsari.aakiflok52-al.chatgpt.site",
+  siteUrl: "https://zenithweb-gold.vercel.app",
 
   // Optional analytics hooks — leave blank to keep tracking OFF by default.
   // See README "Tracking (optional)" section before filling these in.

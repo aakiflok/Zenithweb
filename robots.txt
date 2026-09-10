@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://zenith-navsari.aakiflok52-al.chatgpt.site/sitemap.xml
+Sitemap: https://zenithweb-gold.vercel.app/sitemap.xml

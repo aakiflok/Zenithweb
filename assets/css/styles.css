@@ -1058,3 +1058,14 @@ html { scroll-padding-top: 6rem; }
  .brand__name { font-size: 1rem; }
  .ticket-card { padding: .85rem 1rem; }
 }
+
+.service-links { display:flex; flex-wrap:wrap; gap:.7rem 1.4rem; margin:1.5rem 0; font-size:1rem; }
+.service-links a { text-underline-offset:4px; }
+.service-page { padding-block:2rem 3rem; }
+.service-page > nav { margin-bottom:1.5rem; }
+.service-page h1 { font-size:clamp(2rem,4vw,3rem); max-width:24ch; }
+.service-copy { max-width:72ch; }
+.service-copy section { margin-block:2.5rem; }
+.service-copy h2 { font-size:1.5rem; }
+.service-copy figure { margin:2rem 0; }
+.service-copy img { width:100%; max-width:460px; height:auto; }
